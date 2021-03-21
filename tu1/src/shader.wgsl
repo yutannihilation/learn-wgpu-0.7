@@ -22,9 +22,7 @@ fn vs_main(
     [[location(8)]] model_mat3: vec4<f32>,
 ) -> VertexOutput {
     var out: VertexOutput;
-    var model_mat: mat4x4<f32>;
-    
-    model_mat = mat4x4<f32>(
+    var model_mat: mat4x4<f32> = mat4x4<f32>(
         model_mat0,
         model_mat1,
         model_mat2,
