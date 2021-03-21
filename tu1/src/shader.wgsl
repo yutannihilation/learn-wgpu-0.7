@@ -15,10 +15,23 @@ var<uniform> uni: Uniforms;
 fn vs_main(
     [[location(0)]] pos:        vec3<f32>,
     [[location(1)]] tex_coords: vec2<f32>,
+    // matrix
+    [[location(5)]] model_mat0: vec4<f32>,
+    [[location(6)]] model_mat1: vec4<f32>,
+    [[location(7)]] model_mat2: vec4<f32>,
+    [[location(8)]] model_mat3: vec4<f32>,
 ) -> VertexOutput {
     var out: VertexOutput;
+    var model_mat: mat4x4<f32>;
+    
+    model_mat = mat4x4<f32>(
+        model_mat0,
+        model_mat1,
+        model_mat2,
+        model_mat3
+    );
 
-    out.proj_position = uni.view_proj * vec4<f32>(pos, 1.0);
+    out.proj_position = uni.view_proj * model_mat * vec4<f32>(pos, 1.0);
     out.tex_coords = tex_coords;
 
     return out;
