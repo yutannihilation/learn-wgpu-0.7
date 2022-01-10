@@ -12,6 +12,23 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "cargo",
+			"command": "run",
+			"args": [
+				"--manifest-path",
+				"../naga/Cargo.toml",
+				"src/shaders/shader.wgsl"
+			],
+			"problemMatcher": [
+				"$rustc"
+			],
+			"label": "rust: cargo run",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
 		}
 	]
 }
