@@ -305,9 +305,12 @@ impl State {
         let instances = (0..NUM_INSTANCES_PER_ROW)
             .flat_map(|z| {
                 (0..NUM_INSTANCES_PER_ROW).map(move |x| {
-                    let position = glam::vec3(x as _, 0.0, z as _);
+                    let position = glam::vec3(x as _, 0.0, z as _) - INSTANCE_DISPLACEMENT;
                     // In the case of cgmath, if-else is needed to handle zero. But glam has a convenient method normalize_or_zero().
-                    let rotation = glam::Quat::from_axis_angle(position.normalize_or_zero(), 0.0);
+                    let rotation = glam::Quat::from_axis_angle(
+                        position.normalize_or_zero(),
+                        std::f32::consts::PI / 4.0,
+                    );
 
                     Instance { position, rotation }
                 })
