@@ -71,11 +71,11 @@ struct InstanceRaw {
 
 #[rustfmt::skip]
 const VERTICES: &[Vertex] = &[
-    Vertex { position: [-0.08682410,  0.49240386, 0.0], tex_coords: [0.4131759000, 0.99240386], }, // A
-    Vertex { position: [-0.49513406,  0.06958647, 0.0], tex_coords: [0.0048659444, 0.56958647], }, // B
-    Vertex { position: [-0.21918549, -0.44939706, 0.0], tex_coords: [0.2808145300, 0.05060294], }, // C
-    Vertex { position: [0.359669980, -0.34732910, 0.0], tex_coords: [0.8596700000, 0.15267090], }, // D
-    Vertex { position: [0.441473720,  0.23473590, 0.0], tex_coords: [0.9414737000, 0.73473590], }, // E
+    Vertex { position: [-0.08682410,  0.49240386, 0.0], tex_coords: [0.4131759000, 0.00759614], }, // A
+    Vertex { position: [-0.49513406,  0.06958647, 0.0], tex_coords: [0.0048659444, 0.43041354], }, // B
+    Vertex { position: [-0.21918549, -0.44939706, 0.0], tex_coords: [0.2808145300, 0.94939700], }, // C
+    Vertex { position: [ 0.35966998, -0.34732910, 0.0], tex_coords: [0.8596700000, 0.84732914], }, // D
+    Vertex { position: [ 0.44147372,  0.23473590, 0.0], tex_coords: [0.9414737000, 0.26526410], }, // E
 ];
 
 #[rustfmt::skip]
